@@ -1,7 +1,7 @@
 # exonum-cryptocurrency
 
 
-### Steps to start the blockchain
+### 1) Steps to start the blockchain
 
 #### Cargo build
 
@@ -21,7 +21,7 @@ $ RUST_LOG=info cargo run --example demo
 ```
 
 
-### Execute wallet API's
+### 2) Execute blockchain API's
 
 #### Create wallet1
 
