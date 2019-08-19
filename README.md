@@ -105,7 +105,7 @@ $ curl http://127.0.0.1:8000/api/services/cryptocurrency/v1/wallets
 #### Info on specific wallet
 
 ```
-$ http://127.0.0.1:8000/api/services/cryptocurrency/v1/wallet?pub_key=114e49a764813f2e92609d103d90f23dc5b7e94e74b3e08134c1272441614bd9
+$ curl http://127.0.0.1:8000/api/services/cryptocurrency/v1/wallet?pub_key=114e49a764813f2e92609d103d90f23dc5b7e94e74b3e08134c1272441614bd9
 ```
 
 ###### Response
