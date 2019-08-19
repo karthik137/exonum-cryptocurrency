@@ -721,7 +721,7 @@ This will start the blockchain node.
 
 ###### 1) Create first wallet
 
-### Request
+> Request
 
 API --> http://127.0.0.1:8000/api/explorer/v1/transactions
 
@@ -735,7 +735,7 @@ Body -->
 }
 ```
 
-### Response
+> Response
 
 
 {"tx_hash":"75a9d95694f22823ae01a6feafb3d4e27b55b83bd6897aa581456ea5da382dde"}
@@ -748,14 +748,9 @@ LOG --> 'Create the wallet: Wallet { pub_key: PublicKey(114e49a7...), name: "Ali
 ###### 2) Create the Second Wallet
 
 
-### Request
+> Request
 
-
-API --> 
-
-
-### Request
-
+API -->
 
 http://127.0.0.1:8000/api/explorer/v1/transactions
 
@@ -770,7 +765,7 @@ Body -->
 
 ```
 
-Response --> 
+> Response --> 
 
 
 ```json
@@ -782,7 +777,7 @@ LOG --> 'Create the wallet: Wallet { pub_key: PublicKey(9359df92...), name: "Bob
 
 ###### 3) Transfer money between wallets
 
-### Request
+> Request
 
 http://127.0.0.1:8000/api/explorer/v1/transactions
 
@@ -796,7 +791,7 @@ Body -->
 }
 ```
 
-Response -->
+> Response -->
 
 
 ```json
@@ -809,13 +804,13 @@ LOG --> Transfer between wallets: Wallet { pub_key: PublicKey(114e49a7...), name
 
 ###### 4) Get all wallets
 
-### Request
+> Request
 
 http://127.0.0.1:8000/api/services/cryptocurrency/v1/wallets
 
 TYPE --> GET
 
-### Response
+> Response
 
 ```json
 [{"pub_key":"114e49a764813f2e92609d103d90f23dc5b7e94e74b3e08134c1272441614bd9","name":"Alice","balance":85},{"pub_key":"9359df9223bd4c263692a437e3d244b644c7b7f847db12cc556c2e25c73e6103","name":"Bob","balance":115}]
@@ -823,14 +818,14 @@ TYPE --> GET
 
 ###### 5) Info on specific wallet
 
-### Request
+> Request
 
 http://127.0.0.1:8000/api/services/cryptocurrency/v1/wallet?pub_key=114e49a764813f2e92609d103d90f23dc5b7e94e74b3e08134c1272441614bd9
 
 
 TYPE --> GET
 
-### Response
+> Response
 
 ```json
 
