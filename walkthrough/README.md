@@ -621,7 +621,7 @@ impl Service for CurrencyService {
 ```
 
 
-11) Create Demo Blockchain
+### 11) Create Demo Blockchain
 
 
 The service is ready. You can verify that the library code compiles by running cargo build in the shell. However, we do not have the means of processing requests to the service. To fix this, let us create a minimalistic blockchain network with one node and a single service we’ve just finished creating.
