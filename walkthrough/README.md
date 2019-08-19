@@ -727,10 +727,13 @@ API --> http://127.0.0.1:8000/api/explorer/v1/transactions
 
 TYPE --> POST
 
+Body --> 
+
+```json
 {
   "tx_body": "114e49a764813f2e92609d103d90f23dc5b7e94e74b3e08134c1272441614bd90000010000000a05416c69636587b54e335ef652ccae5112388d128e5162326f60d25196b34ad431e394ee2f77cfe72d201d7ba12db9b9ddd278235493dc444a3671a4710e87bad53411a45a0c"
 }
-
+```
 
 ### Response
 
@@ -760,14 +763,19 @@ TYPE --> POST
 
 Body --> 
 
+```json
 {
   "tx_body": "9359df9223bd4c263692a437e3d244b644c7b7f847db12cc556c2e25c73e61030000010000000a03426f62583236ff2afe268d31ca93ab0258cb3fea944551975d95888dbec88787fb5b1e23a044c4e674c6fbbb239ff7de83e8d3ba8ca57dc7e47a3eb52572f9dbd9df02"
 }
 
+```
+
 Response --> 
 
-{"tx_hash":"7a09053aa590704332b7a18f552150caa8b6e4f777afa4005d169038f481b7f7"}
 
+```json
+{"tx_hash":"7a09053aa590704332b7a18f552150caa8b6e4f777afa4005d169038f481b7f7"}
+```
 
 LOG --> 'Create the wallet: Wallet { pub_key: PublicKey(9359df92...), name: "Bob", balance: 100 }'
 
@@ -781,14 +789,19 @@ http://127.0.0.1:8000/api/explorer/v1/transactions
 TYPE --> POST
 
 Body -->
+
+```json
 {
   "tx_body": "114e49a764813f2e92609d103d90f23dc5b7e94e74b3e08134c1272441614bd90000010001000a220a209359df9223bd4c263692a437e3d244b644c7b7f847db12cc556c2e25c73e6103100f7611ddb5d15e4b77894fae770e5b15f19c07e0f7c7472e31fabe850f0067fb3ab4702130ba6325448d53516a8897a1d9228ba6a87b0e1224143c1b629c4d180b"
 }
+```
 
 Response -->
 
-{"tx_hash":"ae3afbe35f1bfd102daea2f3f72884f04784a10aabe9d726749b1188a6b9fe9b"}
 
+```json
+{"tx_hash":"ae3afbe35f1bfd102daea2f3f72884f04784a10aabe9d726749b1188a6b9fe9b"}
+```
 
 LOG --> Transfer between wallets: Wallet { pub_key: PublicKey(114e49a7...), name: "Alice", balance: 85 } => Wallet { pub_key: PublicKey(9359df92...), name: "Bob", balance: 115 }
 
@@ -804,8 +817,9 @@ TYPE --> GET
 
 ### Response
 
+```json
 [{"pub_key":"114e49a764813f2e92609d103d90f23dc5b7e94e74b3e08134c1272441614bd9","name":"Alice","balance":85},{"pub_key":"9359df9223bd4c263692a437e3d244b644c7b7f847db12cc556c2e25c73e6103","name":"Bob","balance":115}]
-
+```
 
 ###### 5) Info on specific wallet
 
@@ -818,10 +832,13 @@ TYPE --> GET
 
 ### Response
 
+```json
+
 {
   "balance": "85",
   "name": "Alice",
   "pub_key": "114e49a764813f2e92609d103d90f23dc5b7e94e74b3e08134c1272441614bd9"
 }
 
+```
 
