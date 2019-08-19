@@ -14,7 +14,7 @@ $ cargo build
 ```
 
 
-### Run blockchain node
+#### Run blockchain node
 
 ```
 $ RUST_LOG=info cargo run --example demo
