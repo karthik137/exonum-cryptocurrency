@@ -21,6 +21,14 @@ $ RUST_LOG=info cargo run --example demo
 ```
 
 
+### Run test cases
+
+```
+$ cargo test
+
+```
+
+
 ### 2) Execute blockchain API's
 
 #### Create wallet1
