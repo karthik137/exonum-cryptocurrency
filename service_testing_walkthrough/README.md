@@ -203,6 +203,13 @@ fn test_transfer_to_nonexisting_wallet(){
 }
 ```
 
+### Run cargo test
+
+```
+$ cargo test
+
+```
+
 
 
 
