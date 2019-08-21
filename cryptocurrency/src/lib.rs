@@ -13,7 +13,10 @@ use exonum::blockchain::{
 use exonum::crypto::{Hash, PublicKey};
 use exonum::messages::RawTransaction;
 use exonum::storage::{Fork, MapIndex, Snapshot};
-
+use exonum::{
+    crypto::{SecretKey},
+    messages::{Message, Signed},
+};
 
 // Service identifier
 const SERVICE_ID: u16 = 1;
@@ -115,6 +118,44 @@ pub enum CurrencyTransactions {
     /// Transfer tokens transaction.
     Transfer(TxTransfer),
 }
+
+
+    impl TxCreateWallet {
+        #[doc(hidden)]
+        pub fn sign(name: &str, pk: &PublicKey, sk: &SecretKey) -> Signed<RawTransaction> {
+            Message::sign_transaction(
+                Self {
+                    name: name.to_owned(),
+                },
+                SERVICE_ID,
+                *pk,
+                sk,
+            )
+        }
+    }
+    
+    impl TxTransfer {
+        #[doc(hidden)]
+        pub fn sign(
+            to: &PublicKey,
+            amount: u64,
+            seed: u64,
+            pk: &PublicKey,
+            sk: &SecretKey,
+        ) -> Signed<RawTransaction> {
+            Message::sign_transaction(
+                Self {
+                    to: *to,
+                    amount,
+                    seed,
+                },
+                SERVICE_ID,
+                *pk,
+                sk,
+            )
+        }
+    }
+
 
 
 #[derive(Debug, Fail)]
